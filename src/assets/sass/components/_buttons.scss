@@ -41,10 +41,36 @@
         font-size: 13px;
     }
 }
+.video-button {
+    width: 60px;
+    aspect-ratio: 1;
+    @extend %flex-center;
+    font-size: 24px;
+    position: relative;
+    background: $base-color;
+    border-radius: 20px 0 20px 0;
+    &::before,
+    &::after {
+        @extend %position;
+        left: 50%;
+        top: 50%;
+        background: $base-color;
+        border-radius: 20px 0 20px 0;
+        animation: play-button 2s linear infinite;
+    }
+    &::after {
+        animation-delay: 0.8s;
+    }
 
-$colors: "primary" $primary, "secondary" $secondary, "success" $success,
-    "danger" $danger, "warning" $warning, "info" $info, "light" $light,
-    "dark" $dark, "base" $base-color;
+    i {
+        position: relative;
+        z-index: 1;
+        color: $white;
+    }
+}
+
+$colors: "primary" $primary, "secondary" $secondary, "success" $success, "danger" $danger,
+    "warning" $warning, "info" $info, "light" $light, "dark" $dark, "base" $base-color;
 
 @each $name, $color in $colors {
     .btn--#{$name} {

@@ -140,8 +140,106 @@
 </section>
 <!-- What Section Ends Here -->
 
+
+<!-- About Section Starts Here -->
+<section class="about-section pt-120 pb-120">
+    <div class="container">
+        <div class="row gy-4 gy-sm-5">
+            <div class="col-lg-6">
+                <div class="about-thumb rtl me-xxl-5 me-lg-4">
+                    <div class="shape d-none d-sm-block">
+                        <img src="assets/images/shape/shape3.png" alt="shape">
+                    </div>
+                    <img src="assets/images/thumb/about2.jpg" alt="thumb">
+                    <a href="https://www.youtube.com/watch?v=es4x5R-rV9s" class="video-button"><i
+                            class="las la-play"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <div class="section-header mb-4">
+                        <h2 class="section-header__title">What is <span class="text--base">Tetra Coin.</span></h2>
+                        <p>Track current Tetra Pay prices in real-time with historical TPAY USD charts, liquidity, and
+                            volume. Get top exchanges, markets, and more.</p>
+                    </div>
+                    <p>A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it
+                        nearly impossible to counterfeit or double-spend. A defining feature of cryptocurrencies is that
+                        they are generally not issued by any central authority, rendering them theoretically immune to
+                        government interference or manipulation.</p>
+                </div>
+                <div class="feature-wrapper mt-4">
+                    <div class="feature-item">
+                        <div class="feature-item__icon"><i class="las la-poll"></i></div>
+                        <h6 class="title">Trending Crypto Coin</h6>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon"><i class="las la-shield-alt"></i></div>
+                        <h6 class="title">Secure & Safe</h6>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon"><i class="las la-medal"></i></div>
+                        <h6 class="title">Stable Crypto Coin</h6>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon"><i class="las la-poll"></i></div>
+                        <h6 class="title">Your Digital Currency</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section Ends Here -->
+
 @@include('../partial-html/_footer.html')
 @@include('../partial-html/_template-bottom.html')
+
+<script>
+
+
+    var options = {
+        series: [{
+            name: "STOCK ABC",
+            data: series.monthDataSeries1.prices
+        }],
+        chart: {
+            type: 'area',
+            height: 350,
+            zoom: {
+                enabled: false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'straight'
+        },
+
+        title: {
+            text: 'Fundamental Analysis of Stocks',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Price Movements',
+            align: 'left'
+        },
+        labels: series.monthDataSeries1.dates,
+        xaxis: {
+            type: 'datetime',
+        },
+        yaxis: {
+            opposite: true
+        },
+        legend: {
+            horizontalAlign: 'left'
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+</script>
 </body>
 
 </html>
