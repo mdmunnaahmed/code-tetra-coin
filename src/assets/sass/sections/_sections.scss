@@ -38,8 +38,9 @@
 // What Section Starts Here
 .what-item {
     text-align: center;
-    padding: 40px 30px;
+    padding: 40px 20px;
     background: $body-bg;
+    box-shadow: 0 4px 12px 3px rgba($base-color,.3);
     &__icon {
         font-size: 48px;
         margin-bottom: 10px;

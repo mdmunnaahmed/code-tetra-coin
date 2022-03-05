@@ -11,7 +11,7 @@ body {
     color: #d6dee9;
     line-height: 1.6;
     font-family: "Roboto", sans-serif;
-    background: #490fb4;
+    background: #4c11b8;
 }
 
 p {
@@ -114,11 +114,11 @@ a {
 }
 
 .bg--section {
-    background-color: #470fac !important;
+    background-color: #410ca1 !important;
 }
 
 .bg--body {
-    background-color: #490fb4 !important;
+    background-color: #4c11b8 !important;
 }
 
 /* background color css end */
@@ -317,7 +317,19 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(20px, 5vw, 24px);
+    font-size: 24px;
+}
+
+@media (max-width: 1399px) {
+    h4 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 450px) {
+    h4 {
+        font-size: 20px;
+    }
 }
 
 h5 {
@@ -661,7 +673,7 @@ h6 {
 }
 
 .table tbody tr:nth-child(odd) {
-    background: #470fac;
+    background: #410ca1;
 }
 
 .table tbody tr td {
@@ -708,7 +720,7 @@ h6 {
     outline: 0;
     box-shadow: none;
     color: #fff;
-    background-color: #470fac;
+    background-color: #410ca1;
 }
 
 .form--control.form--dark:focus {
@@ -845,12 +857,12 @@ select.style--dark option {
 .custom--card {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    background: #490fb4;
+    background: #4c11b8;
 }
 
 .custom--card .card--header,
 .custom--card .card--footer {
-    background: #470fac;
+    background: #410ca1;
     color: #082032;
     text-align: center;
 }
@@ -968,7 +980,7 @@ select.style--dark option {
 .custom--modal .modal--body,
 .custom--modal .modal--header {
     border-color: rgba(255, 255, 255, 0.2);
-    background: #470fac;
+    background: #410ca1;
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
@@ -990,7 +1002,7 @@ select.style--dark option {
 .custom--modal .modal-content {
     border: none;
     color: #fff;
-    background: #470fac;
+    background: #410ca1;
 }
 
 .pagination {
@@ -1020,7 +1032,7 @@ select.style--dark option {
     padding: 0;
     border-radius: 50% !important;
     border-color: rgba(0, 224, 184, 0.1);
-    background: #490fb4;
+    background: #4c11b8;
     box-shadow: none;
     outline: 0;
 }
@@ -1061,7 +1073,7 @@ select.style--dark option {
 }
 
 .header.sticky {
-    background: #470fac;
+    background: #410ca1;
     position: fixed;
     top: 0;
     border-bottom: 1px solid rgba(0, 224, 184, 0.1);
@@ -1226,7 +1238,7 @@ select.style--dark option {
         box-shadow: 0 3px 12px 3px rgba(0, 224, 184, 0.1);
         overflow: hidden;
         z-index: 11;
-        background: #490fb4;
+        background: #4c11b8;
         border: 3px solid rgba(0, 224, 184, 0.6);
         padding: 10px;
     }
@@ -1385,7 +1397,7 @@ select.style--dark option {
 
 .header-top {
     padding: 5px 0;
-    background: #470fac;
+    background: #410ca1;
 }
 
 .header-contact {
@@ -1520,8 +1532,9 @@ select.style--dark option {
 
 .what-item {
     text-align: center;
-    padding: 40px 30px;
-    background: #490fb4;
+    padding: 40px 20px;
+    background: #4c11b8;
+    box-shadow: 0 4px 12px 3px rgba(0, 224, 184, 0.3);
 }
 
 .what-item__icon {
