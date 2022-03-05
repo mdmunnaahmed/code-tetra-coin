@@ -26,9 +26,14 @@
 .bg--base {
     background-color: $base-color !important;
 }
+.bg--section {
+    background-color: $section-bg !important;
+}
+.bg--body {
+    background-color: $body-bg !important;
+}
 /* background color css end */
-  
-  
+
 .theme-one {
     color: $theme-one !important;
 }

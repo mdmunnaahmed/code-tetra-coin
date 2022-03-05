@@ -1,0 +1,55 @@
+.position-relative {
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.banner-section {
+    position: relative;
+    padding: 200px 0;
+    @include breakpoint(max-xl) {
+        padding: 150px 0;
+    }
+    @include breakpoint(max-md) {
+        padding: 100px 0;
+    }
+    .shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.banner-content {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    .title {
+        font-weight: 600;
+    }
+    .banner-pera {
+        font-size: 24px;
+        font-weight: 300;
+        max-width: 720px;
+        margin: 0 auto;
+        margin-top: 40px;
+        @include breakpoint(max-xl) {
+            margin-top: 30px;
+        }
+        @include breakpoint(max-md) {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        @include breakpoint(max-sm) {
+            margin-top: 20px;
+        }
+    }
+    .search-wrapper {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}

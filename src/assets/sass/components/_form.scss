@@ -4,13 +4,30 @@
 .form--control {
     height: 50px;
     border-radius: 5px;
+    border: 1px solid rgba($base-color, 0.3);
+    outline: 0;
+    box-shadow: none;
+    color: $dark;
+    background-color: $white;
+    &:focus {
+        border: 1px solid rgba($base-color, 1);
+        outline: 0;
+        box-shadow: none;
+    }
+}
+.border--round {
+    border-radius: 35px;
+}
+.form--control.form--dark {
+    height: 50px;
+    border-radius: 5px;
     border: 1px solid $border-color;
     outline: 0;
     box-shadow: none;
-    color: $body-color;
+    color: $white;
+    background-color: $section-bg;
     &:focus {
-        color: $white;
-        border: 1px solid rgba($base-color, 0.6);
+        border: 1px solid rgba($base-color, 1);
         outline: 0;
         box-shadow: none;
     }

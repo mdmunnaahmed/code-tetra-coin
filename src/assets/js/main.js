@@ -32,12 +32,6 @@ headerTrigger.on('click', function(){
     $('.overlay').toggleClass('active')
 });
 
-var headerTrigger2 = $('.top-bar-trigger');
-headerTrigger2.on('click', function(){
-    $('.header-top').toggleClass('active')
-    $('.overlay').addClass('active')
-    $('.overlay').removeClass('active')
-});
 
 // Overlay Event
 var over = $('.overlay');
@@ -50,10 +44,10 @@ over.on('click', function() {
 
 
 // Sticky Menu
-window.addEventListener('scroll', function(){
-  var header = document.querySelector('.header');
-  header.classList.toggle('sticky', window.scrollY > 0);
-});
+// window.addEventListener('scroll', function(){
+//   var header = document.querySelector('.header');
+//   header.classList.toggle('sticky', window.scrollY > 0);
+// });
 
 
 // Scroll To Top 

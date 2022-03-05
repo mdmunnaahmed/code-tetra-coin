@@ -21,10 +21,28 @@ h6 > a {
     word-break: break-word;
 }
 h1 {
-    font-size: clamp(36px, 5vw, 56px);
+    font-size: 64px;
+    @include breakpoint(max-xl) {
+        font-size: 50px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 48px;
+    }
+    @include breakpoint(max-sm) {
+        font-size: 36px;
+    }
 }
 h2 {
-    font-size: clamp(30px, 5vw, 46px);
+    font-size: 48px;
+    @include breakpoint(max-xl) {
+        font-size: 42px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 36px;
+    }
+    @include breakpoint(max-sm) {
+        font-size: 32px;
+    }
 }
 
 h3 {
