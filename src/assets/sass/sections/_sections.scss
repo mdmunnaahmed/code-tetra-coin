@@ -1,0 +1,25 @@
+.section-header {
+    &__title {
+        margin-bottom: 15px;
+        span {
+            position: relative;
+            &::before {
+                @extend %position;
+                bottom: 0;
+                left: 0;
+                background: $base-color;
+                height: 2px;
+            }
+        }
+    }
+    p {
+        font-size: 22px;
+        font-weight: 300;
+        @include breakpoint(max-lg) {
+            font-size: 20px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 18px;
+        }
+    }
+}
