@@ -1,4 +1,5 @@
 .section-header {
+    margin-top: -10px;
     margin-bottom: 50px;
     @include breakpoint(max-sm) {
         margin-bottom: 40px;
@@ -156,11 +157,9 @@
     height: 100%;
     text-align: center;
     position: relative;
+    margin-bottom: 50px;
     @include breakpoint(max-lg) {
         max-width: 280px;
-    }
-    &:not(&:last-child) {
-        margin-bottom: 50px;
     }
     .timeline-header {
         padding: 7px 25px;
@@ -367,3 +366,55 @@
     }
 }
 // Timeline Section Ends Here
+
+// Faq Section Starts Here
+.faq-item {
+    box-shadow: 0 3px 5px 3px rgba($base-color, 0.5);
+    border-radius: 15px;
+    &:not(&:last-child) {
+        margin-bottom: 25px;
+    }
+    &.active {
+        .faq-item__content {
+            display: block;
+        }
+    }
+    &.open {
+        .faq-item__title .title {
+            color: $base-color;
+        }
+        .faq-item__title::before {
+            transform: rotate(90deg);
+        }
+    }
+    &__title {
+        padding: 15px 20px;
+        cursor: pointer;
+        position: relative;
+        &::before,
+        &::after {
+            @extend %position;
+            background: $base-color;
+            width: 2px;
+            height: 20px;
+            top: 16px;
+            right: 19px;
+            @extend %transition;
+        }
+        &::after {
+            width: 20px;
+            height: 2px;
+            right: 10px;
+            top: 25px;
+        }
+        .title {
+            padding-right: 25px;
+            @extend %transition;
+        }
+    }
+    &__content {
+        padding: 10px 20px 25px;
+        display: none;
+    }
+}
+// Faq Section Ends Here
