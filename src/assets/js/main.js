@@ -68,50 +68,10 @@ $('.scrollToTop').on('click', function () {
   return false;
 });
 
-$('.feature__slider').slick({
-  fade: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
-  pauseOnHover: true,
-  centerMode: false,
-  dots: false,
-  arrows: true,
-  nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-  prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-
-  ]
-});
 
 $('.testimonial-slider').slick({
   fade: false,
-  slidesToShow: 3,
+  slidesToShow: 2,
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
@@ -125,13 +85,13 @@ $('.testimonial-slider').slick({
     {
       breakpoint: 1199,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
       }
     },
     {
-      breakpoint: 992,
+      breakpoint: 991,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       }
     },
     {
@@ -144,45 +104,6 @@ $('.testimonial-slider').slick({
       breakpoint: 575,
       settings: {
         slidesToShow: 1,
-      }
-    },
-
-  ]
-});
-
-$('.top-investor-slider').slick({
-  fade: false,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
-  pauseOnHover: true,
-  centerMode: false,
-  dots: false,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 2,
       }
     },
 

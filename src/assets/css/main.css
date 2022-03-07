@@ -227,7 +227,7 @@ ul {
     padding-bottom: clamp(25px, 6vw, 50px);
 }
 
-.pagination, .social-links, .header-bottom-area, .menu, .feature-wrapper, .feature-item, .timeline-wrapper {
+.pagination, .social-links, .header-bottom-area, .menu, .feature-wrapper, .feature-item, .timeline-wrapper, .testimonial-item {
     display: flex;
     flex-wrap: wrap;
 }
@@ -239,7 +239,7 @@ ul {
     justify-content: center;
 }
 
-.video-button::before, .video-button::after, .section-header__title span::before, .timeline-wrapper::before, .timeline-item .timeline-header::before, .timeline-item .timeline-header::after, .timeline-item .timeline-body::before, .timeline-item .timeline-icon::before, .timeline-item:nth-child(even) .timeline-header::before, .timeline-item:nth-child(even) .timeline-header::after, .faq-item__title::before, .faq-item__title::after {
+.video-button::before, .video-button::after, .section-header__title span::before, .timeline-wrapper::before, .timeline-item .timeline-header::before, .timeline-item .timeline-header::after, .timeline-item .timeline-body::before, .timeline-item .timeline-icon::before, .timeline-item:nth-child(even) .timeline-header::before, .timeline-item:nth-child(even) .timeline-header::after, .faq-item__title::before, .faq-item__title::after, .slick-dots li button::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -247,7 +247,7 @@ ul {
 }
 
 a, .btn,
-.cmn--btn, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .faq-item__title::before, .faq-item__title::after, .faq-item__title .title {
+.cmn--btn, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .faq-item__title::before, .faq-item__title::after, .faq-item__title .title, .slick-dots li button::before {
     transition: all 0.3s;
 }
 
@@ -1962,6 +1962,7 @@ select.style--dark option {
 .faq-item {
     box-shadow: 0 3px 5px 3px rgba(0, 224, 184, 0.5);
     border-radius: 15px;
+    background: #4c11b8;
 }
 
 .faq-item:not(.faq-item:last-child) {
@@ -2008,6 +2009,109 @@ select.style--dark option {
 .faq-item__content {
     padding: 10px 20px 25px;
     display: none;
+}
+
+.testimonial-slider {
+    margin-right: -30px;
+}
+
+.testimonial-slider .single-slide {
+    padding-right: 30px;
+}
+
+.slick-dots {
+    bottom: -50px;
+}
+
+.slick-dots li button {
+    background: rgba(0, 224, 184, 0.3);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.slick-dots li button::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 224, 184, 0.8);
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #00e0b8;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button::before {
+    transform: translate(-50%, -50%) scale(2.5);
+}
+
+.testimonial-item__thumb {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .testimonial-item__thumb {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 1199px) and (max-width: 767px) {
+    .testimonial-item__thumb {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 1199px) and (max-width: 575px) {
+    .testimonial-item__thumb {
+        margin: 0 auto;
+    }
+}
+
+.testimonial-item__thumb .quote-icon {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    font-size: 64px;
+    line-height: 1;
+    color: #00e0b8;
+}
+
+.testimonial-item__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial-item__content {
+    width: calc(100% - 150px);
+    padding-left: 25px;
+}
+
+@media (max-width: 575px) {
+    .testimonial-item__content {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 15px;
+        text-align: center;
+    }
+}
+
+.testimonial-item__content .name {
+    margin-bottom: 10px;
+}
+
+.testimonial-item__content .designation {
+    margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

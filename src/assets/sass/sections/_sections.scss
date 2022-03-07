@@ -371,6 +371,7 @@
 .faq-item {
     box-shadow: 0 3px 5px 3px rgba($base-color, 0.5);
     border-radius: 15px;
+    background: $body-bg;
     &:not(&:last-child) {
         margin-bottom: 25px;
     }
@@ -418,3 +419,91 @@
     }
 }
 // Faq Section Ends Here
+
+// Testimonial Section Starts Here
+.testimonial-slider {
+    margin-right: -30px;
+    .single-slide {
+        padding-right: 30px;
+    }
+}
+.slick-dots {
+    bottom: -50px;
+}
+.slick-dots li button {
+    background: rgba($base-color, 0.3);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+        @extend %position;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba($base-color, 0.8);
+        border-radius: 50%;
+        @extend %transition;
+    }
+}
+.slick-dots li.slick-active button {
+    background: rgba($base-color, 1);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    &::before {
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+.testimonial-item {
+    @extend %flex;
+    &__thumb {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        @include breakpoint(max-xl) {
+            @include breakpoint(lg) {
+                width: 120px;
+                height: 120px;
+            }
+            @include breakpoint(max-md) {
+                width: 130px;
+                height: 130px;
+            }
+            @include breakpoint(max-sm) {
+                margin: 0 auto;
+            }
+        }
+        .quote-icon {
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            font-size: 64px;
+            line-height: 1;
+            color: $base-color;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &__content {
+        width: calc(100% - 150px);
+        padding-left: 25px;
+        @include breakpoint(max-sm) {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .name {
+            margin-bottom: 10px;
+        }
+        .designation {
+            margin-bottom: 15px;
+        }
+    }
+}
+// Testimonial Section Ends Here
