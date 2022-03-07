@@ -22,6 +22,9 @@ a {
         color: $base-color;
     }
 }
+img {
+    @extend %transition;
+}
 span,
 sub,
 sup,
