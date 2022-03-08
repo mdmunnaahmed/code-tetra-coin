@@ -61,9 +61,12 @@ h4 {
 h5 {
     font-size: 20px;
     font-weight: 500;
+    @include breakpoint(max-md) {
+        font-size: 18px;
+    }
 }
 h6 {
-    font-size: rem(18px);
+    font-size: 18px;
     font-weight: 500;
 }
 

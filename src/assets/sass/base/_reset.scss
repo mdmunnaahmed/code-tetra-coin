@@ -22,7 +22,9 @@ a {
         color: $base-color;
     }
 }
-img {
+img,
+.title,
+.name {
     @extend %transition;
 }
 span,

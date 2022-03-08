@@ -44,10 +44,15 @@
     text-align: center;
     padding: 40px 20px;
     background: $body-bg;
-    box-shadow: 0 4px 12px 3px rgba($base-color, 0.3);
+    &:hover {
+        .title {
+            color: $base-color;
+        }
+    }
     &__icon {
         font-size: 48px;
         margin-bottom: 10px;
+        color: $base-color;
     }
     &__content {
         .title {
@@ -126,7 +131,14 @@
 #chart *,
 .chart-box * {
     color: $white;
-    // fill: $white;
+}
+.chart-value-wrapper {
+    gap: 15px 45px;
+    .value {
+        @include breakpoint(max-xs) {
+            font-size: 15px;
+        }
+    }
 }
 
 // Timeline Section Starts Here
@@ -327,7 +339,6 @@
             }
         }
     }
-
     &:nth-of-type(4n + 3) {
         .timeline-header {
             background: $theme-three;
@@ -369,7 +380,6 @@
 
 // Faq Section Starts Here
 .faq-item {
-    box-shadow: 0 3px 5px 3px rgba($base-color, 0.5);
     border-radius: 15px;
     background: $body-bg;
     &:not(&:last-child) {
@@ -509,7 +519,7 @@
 // Testimonial Section Ends Here
 
 // Blog Section Starts Here
-div[class*='col'] {
+div[class*="col"] {
     &:nth-of-type(3n + 1) {
         .post-item {
             &__content {

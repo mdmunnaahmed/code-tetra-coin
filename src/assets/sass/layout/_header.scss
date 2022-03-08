@@ -7,23 +7,19 @@
     @extend %transition;
     &.sticky {
         background: $section-bg;
-        box-shadow: 0 4px 12px rgba($base-color, 0.4);
+        box-shadow: 0 4px 12px rgba($base-color, 0.2);
     }
 }
 .header-bottom {
     background: $body-bg;
     width: 100%;
-    padding: 20px 0;
     @include breakpoint(max-lg) {
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }
 .header-bottom-area {
     @extend %flex;
     justify-content: space-between;
-    @include breakpoint(max-lg) {
-        justify-content: space-between;
-    }
 }
 .logo {
     img {
@@ -160,7 +156,7 @@
                 &:hover {
                     padding-left: 20px;
                     background: $base-color;
-                    color: $dark;
+                    color: $white;
                 }
             }
         }
@@ -301,4 +297,7 @@
 
 .account-login-area {
     height: 100%;
+    padding: 20px 25px;
+    font-family: $heading;
+    font-weight: 600;
 }
