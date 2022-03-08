@@ -1,19 +1,17 @@
 // Header Section Starts Here
 .header {
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 111;
     @extend %transition;
-    border-bottom: 1px solid transparent;
     &.sticky {
         background: $section-bg;
-        position: fixed;
-        top: 0;
-        border-bottom: 1px solid rgba($base-color, 0.1);
+        box-shadow: 0 4px 12px rgba($base-color, 0.4);
     }
 }
 .header-bottom {
+    background: $body-bg;
     width: 100%;
     padding: 20px 0;
     @include breakpoint(max-lg) {
@@ -39,7 +37,7 @@
         }
         @include breakpoint(max-sm) {
             max-width: 100px;
-            max-height: 50px;
+            max-height: 45px;
         }
     }
 }
@@ -293,11 +291,14 @@
     }
 }
 
-
 .header-top {
     padding: 5px 0;
     background: $section-bg;
 }
 .header-contact {
     gap: 10px 20px;
+}
+
+.account-login-area {
+    height: 100%;
 }

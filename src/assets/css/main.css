@@ -1102,21 +1102,19 @@ select.style--dark option {
 }
 
 .header {
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 111;
-    border-bottom: 1px solid transparent;
 }
 
 .header.sticky {
     background: #410ca1;
-    position: fixed;
-    top: 0;
-    border-bottom: 1px solid rgba(0, 224, 184, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 224, 184, 0.4);
 }
 
 .header-bottom {
+    background: #4c11b8;
     width: 100%;
     padding: 20px 0;
 }
@@ -1157,7 +1155,7 @@ select.style--dark option {
 @media (max-width: 575px) {
     .logo img {
         max-width: 100px;
-        max-height: 50px;
+        max-height: 45px;
     }
 }
 
@@ -1439,6 +1437,10 @@ select.style--dark option {
 
 .header-contact {
     gap: 10px 20px;
+}
+
+.account-login-area {
+    height: 100%;
 }
 
 .footer-links {
