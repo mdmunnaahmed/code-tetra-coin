@@ -1136,6 +1136,7 @@ select.style--dark option {
 
 .header-bottom-area {
     justify-content: space-between;
+    position: relative;
 }
 
 .logo img {
@@ -1151,7 +1152,7 @@ select.style--dark option {
 
 @media (max-width: 767px) {
     .logo img {
-        max-width: 150px;
+        max-width: 130px;
     }
 }
 
@@ -1449,6 +1450,16 @@ select.style--dark option {
     font-weight: 600;
 }
 
+.header-top-wrapper {
+    gap: 5px 25px;
+}
+
+@media (max-width: 991px) {
+    .header-top-wrapper {
+        font-size: 15px;
+    }
+}
+
 .footer-links {
     font-size: 15px;
 }
@@ -1685,6 +1696,7 @@ select.style--dark option {
 
 .section-header__title span {
     position: relative;
+    color: #03B4ED;
 }
 
 .section-header__title span::before {
@@ -2375,6 +2387,80 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     text-decoration: underline;
     font-size: 18px;
     font-weight: 500;
+}
+
+.dashboard-sidebar {
+    max-width: 300px;
+    background-color: #5613cf;
+    min-height: 100vh;
+}
+
+.dashboard-sidebar-header {
+    background-color: #410ca1;
+}
+
+.dashboard-widget {
+    padding: 30px;
+}
+
+.user {
+    text-align: center;
+}
+
+.user .user-thumb {
+    width: 80px;
+    aspect-ratio: 1;
+    margin: 0 auto 13px;
+}
+
+.user .user-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.dashboard-menu {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.dashboard-menu li {
+    padding: 7px 0;
+}
+
+.dashboard-menu li.has-submenu {
+    position: relative;
+}
+
+.dashboard-menu li.has-submenu::before {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Line Awesome Free";
+    content: "\f107";
+    right: 0;
+    top: 5px;
+}
+
+.dashboard-menu li a {
+    display: block;
+}
+
+.dashboard-menu li a i {
+    margin-right: 7px;
+    font-size: 20px;
+}
+
+.dashboard-menu .dashboard-submenu {
+    padding: 5px 0;
+    padding-left: 35px;
+    font-size: 16px;
+    display: none;
+}
+
+.dashbaord-sidebar-body {
+    height: 100%;
+    background-color: #5613cf;
 }
 
 /*# sourceMappingURL=main.css.map */
