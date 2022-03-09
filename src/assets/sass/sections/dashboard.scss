@@ -1,13 +1,39 @@
+.dashboard-section {
+    @extend %flex;
+}
 .dashboard-sidebar {
     max-width: 300px;
+    width: 100%;
     background-color: lighten($body-bg, 5%);
-    min-height: 100vh;
+    height: 100vh;
+    @extend %transition;
+    @include breakpoint(max-lg) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        min-height: auto;
+        overflow-y: auto;
+        max-width: 280px;
+        transform: translateX(-101%);
+        &.active {
+            transform: translateX(0);
+        }
+    }
+    .sidebar-close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        line-height: 1;
+        padding: 6px;
+        &:hover {
+            background: $danger;
+        }
+    }
 }
-
 .dashboard-sidebar-header {
     background-color: $section-bg;
 }
-
 .dashboard-widget {
     padding: 30px;
 }
@@ -24,10 +50,11 @@
         }
     }
 }
-
 .dashboard-menu {
-    font-size: 17px;
     font-weight: 300;
+    @include breakpoint(max-lg) {
+        font-size: 15px;
+    }
     li {
         padding: 7px 0;
         &.has-submenu {
@@ -43,19 +70,121 @@
             display: block;
             i {
                 margin-right: 7px;
-                font-size: 20px;
+                font-size: 19px;
             }
         }
     }
     .dashboard-submenu {
         padding: 5px 0;
         padding-left: 35px;
-        font-size: 16px;
+        font-size: 15px;
         display: none;
+        @include breakpoint(max-lg) {
+            font-size: 14px;
+        }
     }
 }
-
 .dashbaord-sidebar-body {
-    height: 100%;
     background-color: lighten($body-bg, 5%);
+}
+
+.dashboard-body {
+    width: calc(100% - 300px);
+    padding: 40px;
+}
+
+// Card
+.dashboard-card {
+    padding: 35px;
+    background: $gradient-five;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    @include media-max(1700px) {
+        padding: 30px 25px;
+    }
+    &::before {
+        @extend %position-set;
+        background: url(./../images/shape/line.png) center no-repeat;
+        background-position: left;
+        top: 0;
+        right: 0;
+        opacity: 0.3;
+        z-index: -1;
+    }
+    &__content {
+        .title {
+            font-weight: 500;
+            color: $white;
+            word-spacing: 2px;
+            margin-bottom: 8px;
+            @include media-max(1500px) {
+                font-size: 15px;
+            }
+        }
+        .value {
+            @include media-max(1500px) {
+                font-size: 25px;
+            }
+            span {
+                font-family: $body;
+            }
+        }
+    }
+    &__icon {
+        width: clamp(40px, 4vw, 80px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $gradient-five;
+        font-size: clamp(20px, 3vw, 45px);
+        color: rgba($white, 0.3);
+        box-shadow: 0 3px 8px rgba($base-color, 0.3);
+        font-weight: 700;
+    }
+    .progress-wrapper {
+        position: absolute;
+        max-width: 100px;
+        height: 15px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $body-bg;
+        width: 100%;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        &::before {
+            @extend %position;
+            left: -18px;
+            bottom: -2px;
+            background: url(./../images/shape/round1.png);
+            background-size: contain;
+            width: 22px;
+            height: 17px;
+            z-index: 1;
+        }
+        &::after {
+            @extend %position;
+            right: -18px;
+            bottom: -2px;
+            background: url(./../images/shape/round1.png);
+            transform: rotateY(-180deg);
+            background-size: contain;
+            width: 22px;
+            height: 17px;
+            z-index: 1;
+        }
+        .progress {
+            z-index: 1;
+            width: 75%;
+        }
+    }
 }

@@ -6,10 +6,10 @@ $body: "Roboto", sans-serif;
 $title-color: #ffffff;
 
 // Essential Colors
-$base-color: #F23935;
+$base-color: #f23935;
 $base-color: #1f71fd;
-$base-color: #4169E1;
-$base-color: #03B4ED;
+$base-color: #4169e1;
+$base-color: #03b4ed;
 
 $accent-color: #160c66;
 
@@ -30,7 +30,7 @@ $theme-three: #0c93d2;
 $theme-four: #f6a200;
 $theme-five: #09389e;
 
-// color variable for Bootstrap
+// Color variable for Bootstrap
 $primary: #7367f0;
 $secondary: #868e96;
 $success: #28c76f;
@@ -40,3 +40,10 @@ $info: #1e9ff2;
 $dark: #082032;
 $light: #bcc7da;
 $muted: #999a9e;
+
+// Gradient Color
+$gradient-one: linear-gradient(117deg, #e45340 0%, #d502fa 100%);
+$gradient-two: linear-gradient(117deg, #ffac48 0%, #ff458b 100%);
+$gradient-three: linear-gradient(117deg, #2fe4c0 0%, #319b92 100%);
+$gradient-four: linear-gradient(117deg, #5bf1fe 0%, #4fb0ff 100%);
+$gradient-five: linear-gradient(117deg, #589fff 0%, #596fff 100%);
