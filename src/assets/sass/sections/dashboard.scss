@@ -7,6 +7,9 @@
     background-color: lighten($body-bg, 5%);
     height: 100vh;
     @extend %transition;
+    z-index: 1;
+    position: sticky;
+    top: 0;
     @include breakpoint(max-lg) {
         position: fixed;
         left: 0;
@@ -63,7 +66,8 @@
                 @include line-ico;
                 content: "\f107";
                 right: 0;
-                top: 5px;
+                top: 7px;
+                font-size: 14px;
             }
         }
         a {
@@ -91,6 +95,19 @@
 .dashboard-body {
     width: calc(100% - 300px);
     padding: 40px;
+    @include breakpoint(max-xxl) {
+        padding: 30px;
+    }
+    @include breakpoint(max-xl) {
+        padding: 20px;
+    }
+    @include breakpoint(max-lg) {
+        width: 100%;
+    }
+    @include breakpoint(max-md) {
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 // Card
@@ -185,6 +202,48 @@
         .progress {
             z-index: 1;
             width: 75%;
+        }
+    }
+}
+.latest-transaction-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.latest-transaction {
+    padding: 15px;
+    border-radius: 7px;
+    background: $body-bg;
+    &:not(&:last-child) {
+        margin-bottom: 15px;
+    }
+    .left-side {
+        width: calc(100% - 150px);
+        .title {
+            font-weight: 500;
+        }
+        .des {
+            font-size: 14px;
+            @include text-wrap;
+            -webkit-line-clamp: 1;
+        }
+    }
+    .price {
+        width: 150px;
+        text-align: right;
+    }
+}
+.deposit-card {
+    img {
+        width: 100%;
+    }
+    .card-footer {
+        background: transparent;
+        padding-top: 0;
+        .cmn--btn {
+            width: 100%;
+            @include breakpoint(max-lg) {
+                padding: 7px 25px !important;
+            }
         }
     }
 }

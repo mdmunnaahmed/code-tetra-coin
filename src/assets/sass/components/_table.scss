@@ -80,7 +80,6 @@
                 display: block;
                 td {
                     display: flex;
-                    align-items: center;
                     justify-content: space-between;
                     padding: 10px 15px;
                     border: none;
@@ -94,11 +93,11 @@
                     &::before {
                         content: attr(data-label);
                         font-family: $heading;
-                        font-size: 16px;
+                        font-size: 14px;
                         color: $title-color;
                         font-weight: 500;
-                        @include breakpoint(max-sm) {
-                            font-size: 15px;
+                        @include breakpoint(max-xs) {
+                            font-size: 13px;
                         }
                     }
                 }
@@ -109,20 +108,36 @@
 
 .table {
     margin: 0;
-    border: none;
-    width: 100%;
-    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba($base-color, 0.2);
+    & > :not(:first-child) {
+        border-top: 0;
+    }
+    & > :not(caption) > * > * {
+        border-bottom-width: 0;
+    }
     thead {
         tr {
-            // background: rgba($base-color,1);
+            &:first-child {
+                th:first-child {
+                    border-radius: 10px 0 0 0;
+                    text-align: left;
+                }
+            }
+            &:last-child {
+                th:last-child {
+                    border-radius: 0 10px 0 0;
+                    text-align: right;
+                }
+            }
             th {
-                padding: 10px 15px;
-                font-family: $heading;
+                background: $base-color;
+                padding: 16px 15px;
                 color: $white;
                 border: none;
                 font-size: 15px;
                 font-weight: 500;
-                border: 1px solid $border-color;
+                border: 0 !important;
+                text-align: center;
             }
         }
     }
@@ -132,13 +147,30 @@
             &:nth-child(odd) {
                 background: $section-bg;
             }
+            &:last-child {
+                td {
+                    &:first-child {
+                        border-radius: 0 0 0 10px;
+                    }
+                    &:last-child {
+                        border-radius: 0 0 10px 0;
+                    }
+                }
+            }
             td {
                 color: $white;
                 vertical-align: middle;
-                padding: 10px 15px;
+                padding: 15px 15px;
                 border-width: 1px;
-                @include breakpoint(lg) {
-                    border-color: $border-color;
+                text-align: center;
+                @include breakpoint(xl) {
+                    border-color: transparent;
+                }
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: right;
                 }
             }
         }

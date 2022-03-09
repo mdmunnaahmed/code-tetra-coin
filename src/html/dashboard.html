@@ -19,8 +19,8 @@
                     <ul class="dashboard-submenu">
                         <li><a href="deposit.html"><i class="las la-hand-holding-usd"></i> Deposit Now</a></li>
                         <li><a href="deposit-log.html"><i class="las la-history"></i> Deposit History</a></li>
-                        <li><a href="withdraw.html"><i class="las la-receipt"></i> Transaction Now</a></li>
-                        <li><a href="withdraw-log.html"><i class="las la-history"></i> Transaction History</a></li>
+                        <li><a href="withdraw.html"><i class="las la-receipt"></i> Withdraw Now</a></li>
+                        <li><a href="withdraw-log.html"><i class="las la-history"></i> Withdraw History</a></li>
                     </ul>
                 </li>
                 <li><a href="#0"><i class="las la-money-check"></i> Buy Tetra</a></li>
@@ -32,7 +32,7 @@
             </ul>
         </div>
     </div>
-    <div class="dashboard-body d-none">
+    <div class="dashboard-body">
         <div class="row g-4">
             <div class="col-lg-6 col-xxl-3 col-md-4 col-sm-6">
                 <div class="dashboard-card">
@@ -91,11 +91,176 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-5">
+            <div class="col-lg-8">
+                <div class="card custom--card">
+                    <div class="card-header">
+                        <h5 class="title">Tetra Price History</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card custom--card mb-4">
+                    <div class="card-header">
+                        <h5 class="title">Make Transaction</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="button-wrapper justify-content-center">
+                            <a href="#0" class="cmn--btn btn--md">Deposit Now</a>
+                            <a href="#0" class="cmn--btn btn--md">Withdraw Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card custom--card">
+                    <div class="card-header">
+                        <h5 class="title">Latest Transactions</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="latest-transaction-wrapper">
+                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                <div class="left-side">
+                                    <p class="title text--base">Deposit</p>
+                                    <p class="des">this tranaction is requrested by your friend.</p>
+                                </div>
+                                <h5 class="price text--base">$ <span>5000</span></h5>
+                            </div>
+                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                <div class="left-side">
+                                    <p class="title text--base">Withdraw</p>
+                                    <p class="des">this tranaction is requrested for buying laptop.</p>
+                                </div>
+                                <h5 class="price text--base">$ <span>5000</span></h5>
+                            </div>
+                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                <div class="left-side">
+                                    <p class="title text--base">Withdraw</p>
+                                    <p class="des">this tranaction is requrested by your friend.</p>
+                                </div>
+                                <h5 class="price text--base">$ <span>5000</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Dashboard Section Ends Here -->
 
 @@include('../partial-html/_template-bottom.html')
+<script src="../assets/js/lib/chart-dataprice.js"></script>
+
+<script>
+    var options = {
+        series: [{
+            name: "Tetra Coin Price",
+            data: series.monthDataSeries1.prices
+        }],
+        chart: {
+            type: 'area',
+            height: 400,
+            foreColor: "#fff",
+            zoom: {
+                enabled: true
+            },
+            dropShadow: {
+                enabled: true,
+                enabledSeries: [0],
+                top: -2,
+                left: 2,
+                blur: 5,
+                opacity: 0.06
+            },
+            toolbar: {
+                show: false
+            },
+        },
+        colors: ['#00e0b8', '#4c11b8'],
+        dataLabels: {
+            enabled: false,
+            style: {
+                colors: ['#F44336', '#E91E63', '#9C27B0']
+            }
+        },
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'dark',
+                gradientToColors: ["#4c11b8", "#000000"],
+                shadeIntensity: 1,
+                type: 'horizontal',
+                opacityFrom: 1,
+                opacityTo: 1,
+                stops: [0, 100, 100, 100]
+            },
+        },
+        tooltip: {
+            enabled: true,
+            theme: "dark",
+            style: {
+                fontSize: '12px',
+            },
+        },
+        stroke: {
+            curve: "smooth",
+            width: 5
+        },
+
+        title: {
+            text: 'Current Tetra Value',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Price Movements',
+            align: 'left'
+        },
+        labels: series.monthDataSeries1.dates,
+        markers: {
+            size: 0,
+            colors: ["#4c11b8"],
+            strokeColor: "#fff",
+            strokeWidth: 3,
+            strokeOpacity: 1,
+            fillOpacity: 1,
+            hover: {
+                size: 6
+            }
+        },
+
+        xaxis: {
+            type: 'datetime',
+        },
+        yaxis: {
+            opposite: true
+        },
+        legend: {
+            horizontalAlign: 'left'
+        },
+        grid: {
+            padding: {
+                left: 5,
+                right: 5
+            },
+            xaxis: {
+                lines: {
+                    show: false
+                }
+            },
+            yaxis: {
+                lines: {
+                    show: false
+                }
+            },
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+</script>
 </body>
 
 </html>

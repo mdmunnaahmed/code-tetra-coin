@@ -4,17 +4,21 @@
 .form--control {
     height: 50px;
     border-radius: 5px;
-    border: 1px solid rgba($base-color, 0.3);
-    outline: 0;
+    border: 1px solid rgba($white, 0.3);
     box-shadow: none;
-    color: $dark;
-    background-color: $white;
+    color: $white;
+    background-color: transparent;
     &:focus {
+        color: $white;
+        background-color: transparent;
         border: 1px solid rgba($base-color, 1);
-        outline: 0;
         box-shadow: none;
     }
 }
+.form--control::placeholder {
+    color: rgba($white, 0.6);
+}
+
 .border--round {
     border-radius: 35px;
 }
