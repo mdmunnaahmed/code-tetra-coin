@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     font-family: $body;
     background: $body-bg;
+    word-wrap: break-word;
 }
 p {
     margin: 0;

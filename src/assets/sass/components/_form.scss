@@ -16,6 +16,18 @@
         outline: 0;
     }
 }
+
+.form--control::file-selector-button {
+    background: $base-color;
+    color: $white;
+    border-radius: 3px;
+}
+.form--control:hover::file-selector-button {
+    background: darken($base-color, 5%) !important;
+    color: $white;
+    border-radius: 3px;
+}
+
 .input-group-text {
     background: $body-bg;
     border-color: $border-color;
@@ -23,6 +35,9 @@
 }
 .form--control::placeholder {
     color: rgba($white, 0.6);
+}
+textarea.form--control {
+    height: 140px;
 }
 
 .border--round {

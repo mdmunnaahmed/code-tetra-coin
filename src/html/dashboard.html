@@ -4,15 +4,18 @@
 <!-- Dashboard Section Starts Here -->
 <div class="dashboard-top d-flex flex-wrap align-items-center justify-content-between">
     <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
-    <div class="user account-menu d-flex flex-wrap align-items-center gap-3">
-        <p class="fs--14px">Hi, Droper</p>
-        <div class="user-thumb mb-0"><img src="assets/images/thumb/user.png" alt="user"></div>
-        <ul class="account-submenu">
-            <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
-            <li><a href="password.html"><i class="las la-lock"></i> Change Password</a></li>
-            <li><a href="two-factor.html"><i class="las la-lock"></i> Two Factor</a></li>
-            <li><a href="#0"><i class="las la-sign-out-alt"></i> Logout</a></li>
-        </ul>
+    <div class="d-flex align-items-center gap-3">
+        <div class="user account-menu d-flex flex-wrap align-items-center gap-3">
+            <p class="fs--14px">Hi, Droper</p>
+            <div class="user-thumb mb-0"><img src="assets/images/thumb/user.png" alt="user"></div>
+            <ul class="account-submenu">
+                <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
+                <li><a href="password.html"><i class="las la-lock"></i> Change Password</a></li>
+                <li><a href="two-factor.html"><i class="las la-lock"></i> Two Factor</a></li>
+                <li><a href="#0"><i class="las la-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="dashboard-sidebar-toggler d-lg-none"><i class="las la-sliders-h"></i></div>
     </div>
 </div>
 
@@ -105,55 +108,61 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-lg-8">
+        <div class="row gy-5 pt-5">
+            <div class="col-xxl-8">
                 <div class="card custom--card">
                     <div class="card-header">
                         <h5 class="title">Tetra Price History</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body p-0 p-sm-3">
                         <div id="chart"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card custom--card mb-4">
-                    <div class="card-header">
-                        <h5 class="title">Make Transaction</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="button-wrapper justify-content-center">
-                            <a href="#0" class="cmn--btn btn--md">Deposit Now</a>
-                            <a href="#0" class="cmn--btn btn--md">Withdraw Now</a>
+            <div class="col-xxl-4">
+                <div class="row gy-4">
+                    <div class="col-md-6 col-xxl-12">
+                        <div class="card custom--card mb-4">
+                            <div class="card-header">
+                                <h5 class="title">Make Transaction</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="button-wrapper justify-content-center">
+                                    <a href="#0" class="cmn--btn btn--sm">Deposit Now</a>
+                                    <a href="#0" class="cmn--btn btn--sm">Withdraw Now</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card custom--card">
-                    <div class="card-header">
-                        <h5 class="title">Latest Transactions</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="latest-transaction-wrapper">
-                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
-                                <div class="left-side">
-                                    <p class="title text--base">Deposit</p>
-                                    <p class="des">this tranaction is requrested by your friend.</p>
-                                </div>
-                                <h5 class="price text--base">$ <span>5000</span></h5>
+                    <div class="col-md-6 col-xxl-12">
+                        <div class="card custom--card">
+                            <div class="card-header">
+                                <h5 class="title">Latest Transactions</h5>
                             </div>
-                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
-                                <div class="left-side">
-                                    <p class="title text--base">Withdraw</p>
-                                    <p class="des">this tranaction is requrested for buying laptop.</p>
+                            <div class="card-body">
+                                <div class="latest-transaction-wrapper">
+                                    <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                        <div class="left-side">
+                                            <p class="title text--base">Deposit</p>
+                                            <p class="des">this tranaction is requrested by your friend.</p>
+                                        </div>
+                                        <h5 class="price text--base">$ <span>5000</span></h5>
+                                    </div>
+                                    <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                        <div class="left-side">
+                                            <p class="title text--base">Withdraw</p>
+                                            <p class="des">this tranaction is requrested for buying laptop.</p>
+                                        </div>
+                                        <h5 class="price text--base">$ <span>5000</span></h5>
+                                    </div>
+                                    <div class="latest-transaction d-flex flex-wrap justify-content-between">
+                                        <div class="left-side">
+                                            <p class="title text--base">Withdraw</p>
+                                            <p class="des">this tranaction is requrested by your friend.</p>
+                                        </div>
+                                        <h5 class="price text--base">$ <span>5000</span></h5>
+                                    </div>
                                 </div>
-                                <h5 class="price text--base">$ <span>5000</span></h5>
-                            </div>
-                            <div class="latest-transaction d-flex flex-wrap justify-content-between">
-                                <div class="left-side">
-                                    <p class="title text--base">Withdraw</p>
-                                    <p class="des">this tranaction is requrested by your friend.</p>
-                                </div>
-                                <h5 class="price text--base">$ <span>5000</span></h5>
                             </div>
                         </div>
                     </div>

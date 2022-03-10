@@ -21,6 +21,7 @@
         transform: translateX(-101%);
         &.active {
             transform: translateX(0);
+            z-index: 11;
         }
     }
     .sidebar-close {
@@ -220,7 +221,7 @@
         margin-bottom: 15px;
     }
     .left-side {
-        width: calc(100% - 150px);
+        width: calc(100% - 100px);
         .title {
             font-weight: 500;
         }
@@ -231,7 +232,7 @@
         }
     }
     .price {
-        width: 150px;
+        width: 100px;
         text-align: right;
     }
 }
@@ -255,6 +256,7 @@
 .deposit-preview {
     @extend %flex-center;
     padding: 30px;
+    border: 2px solid rgba($base-color, 0.3);
 }
 
 .deposit-preview .deposit-thumb {
@@ -333,9 +335,18 @@
 .dashboard-top {
     background-color: lighten($color: $body-bg, $amount: 5%);
     padding: 10px 30px;
+    @include breakpoint(max-xl) {
+        padding: 10px 20px;
+    }
+    @include breakpoint(max-md) {
+        padding: 10px 15px;
+    }
     .logo {
         img {
             max-width: 120px;
+            @include breakpoint(max-xs) {
+                max-width: 80px;
+            }
         }
     }
     .user-thumb {
@@ -376,4 +387,8 @@
             }
         }
     }
+}
+
+.dashboard-sidebar-toggler {
+    font-size: 24px;
 }

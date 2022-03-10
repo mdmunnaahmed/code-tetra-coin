@@ -41,10 +41,12 @@ over.on("click", function () {
 });
 
 // Sticky Menu
-// window.addEventListener("scroll", function () {
-//     var header = document.querySelector(".header");
-//     header.classList.toggle("sticky", window.scrollY > 0);
-// });
+window.addEventListener("scroll", function () {
+    var header = document.querySelector(".header");
+    if (header) {
+        header.classList.toggle("sticky", window.scrollY > 0);
+    }
+});
 
 // Scroll To Top
 var scrollTop = $(".scrollToTop");
@@ -165,3 +167,12 @@ $(".dashboard-menu>li>a").on("click", function () {
 });
 
 $(".dashboard-submenu li a.active").parent("li").addClass("d-block");
+
+$(".dashboard-sidebar-toggler").on("click", function () {
+    $(".dashboard-sidebar").addClass("active");
+    $(".overlay").addClass("active");
+});
+
+$(".sidebar-close").on("click", function () {
+    $(".dashboard-sidebar").removeClass("active");
+});
