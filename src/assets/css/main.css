@@ -247,12 +247,12 @@ ul {
     padding-bottom: clamp(25px, 6vw, 50px);
 }
 
-.button-wrapper, .pagination, .social-links, .header-bottom-area, .menu, .feature-wrapper, .feature-item, .timeline-wrapper, .testimonial-item, .dashboard-section {
+.button-wrapper, .pagination, .social-links, .header-bottom-area, .menu, .feature-wrapper, .feature-item, .timeline-wrapper, .testimonial-item, .dashboard-section, .deposit-preview .deposit-content, .deposit-preview .deposit-content ul li {
     display: flex;
     flex-wrap: wrap;
 }
 
-.video-button, .post-item__content .tag {
+.video-button, .post-item__content .tag, .deposit-preview {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -278,7 +278,7 @@ ul {
 a, img,
 .title,
 .name, .btn,
-.cmn--btn, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .faq-item__title::before, .faq-item__title::after, .faq-item__title .title, .slick-dots li button::before, .dashboard-sidebar {
+.cmn--btn, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .faq-item__title::before, .faq-item__title::after, .faq-item__title .title, .slick-dots li button::before, .dashboard-sidebar, .account-menu .account-submenu {
     transition: all 0.3s;
 }
 
@@ -830,6 +830,13 @@ h6 {
     background-color: transparent;
     border: 1px solid #03b4ed;
     box-shadow: none;
+    outline: 0;
+}
+
+.input-group-text {
+    background: #4c11b8;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 .form--control::placeholder {
@@ -840,20 +847,16 @@ h6 {
     border-radius: 35px;
 }
 
-.form--control.form--dark {
+.form--control.style--dark {
     height: 50px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
     outline: 0;
     box-shadow: none;
-    color: #fff;
-    background-color: #410ca1;
+    color: #082032;
+    background-color: #fff;
 }
 
-.form--control.form--dark:focus {
-    border: 1px solid #03b4ed;
-    outline: 0;
-    box-shadow: none;
+.form--control.style--dark::-webkit-input-placeholder {
+    color: #082032;
 }
 
 .form--control[type="file"] {
@@ -1691,6 +1694,7 @@ select option {
 
 .banner-content .search-wrapper .form--control {
     height: 60px;
+    background: #fff;
 }
 
 .inner-banner {
@@ -2546,6 +2550,10 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     display: block;
 }
 
+.dashboard-menu li a.active {
+    color: #03b4ed;
+}
+
 .dashboard-menu li a i {
     margin-right: 7px;
     font-size: 19px;
@@ -2758,6 +2766,134 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     .deposit-card .card-footer .cmn--btn {
         padding: 7px 25px !important;
     }
+}
+
+.deposit-preview {
+    padding: 30px;
+}
+
+.deposit-preview .deposit-thumb {
+    width: 40%;
+}
+
+.deposit-preview .deposit-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deposit-preview .deposit-content {
+    width: 60%;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    padding-left: 30px;
+}
+
+@media (max-width: 1199px) {
+    .deposit-preview .deposit-content ul li {
+        font-size: 14px !important;
+    }
+
+    .deposit-preview {
+        padding: 30px 20px;
+    }
+}
+
+.deposit-preview .deposit-content ul {
+    width: 100%;
+    text-align: center;
+}
+
+.deposit-preview .deposit-content ul li {
+    padding: 10px 0;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deposit-preview .deposit-content ul li:not(:last-child) {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+    .deposit-preview {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .deposit-preview .deposit-thumb {
+        width: 100%;
+    }
+
+    .deposit-preview .deposit-content {
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .deposit-preview {
+        padding: 15px;
+    }
+
+    .deposit-preview .deposit-content li {
+        font-size: 14px !important;
+    }
+}
+
+.dashboard-top {
+    background-color: #5613cf;
+    padding: 10px 30px;
+}
+
+.dashboard-top .logo img {
+    max-width: 120px;
+}
+
+.dashboard-top .user-thumb {
+    width: 40px;
+}
+
+.fs--14px {
+    font-size: 14px;
+}
+
+.account-menu {
+    position: relative;
+}
+
+.account-menu:hover .account-submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.account-menu .account-submenu {
+    position: absolute;
+    width: 170px;
+    right: 0;
+    top: 100%;
+    text-align: left;
+    background: #410ca1;
+    padding: 12px;
+    font-size: 14px;
+    z-index: 11;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    box-shadow: 0 3px 15px rgba(3, 180, 237, 0.3);
+}
+
+.account-menu .account-submenu li {
+    padding: 3px 0;
+}
+
+.account-menu .account-submenu li a {
+    display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

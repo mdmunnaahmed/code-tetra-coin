@@ -13,7 +13,13 @@
         background-color: transparent;
         border: 1px solid rgba($base-color, 1);
         box-shadow: none;
+        outline: 0;
     }
+}
+.input-group-text {
+    background: $body-bg;
+    border-color: $border-color;
+    color: $white;
 }
 .form--control::placeholder {
     color: rgba($white, 0.6);
@@ -22,19 +28,15 @@
 .border--round {
     border-radius: 35px;
 }
-.form--control.form--dark {
+.form--control.style--dark {
     height: 50px;
-    border-radius: 5px;
-    border: 1px solid $border-color;
     outline: 0;
     box-shadow: none;
-    color: $white;
-    background-color: $section-bg;
-    &:focus {
-        border: 1px solid rgba($base-color, 1);
-        outline: 0;
-        box-shadow: none;
-    }
+    color: $dark;
+    background-color: $white;
+}
+.form--control.style--dark::-webkit-input-placeholder {
+    color: $dark;
 }
 .form--control[type="file"] {
     line-height: 25px;

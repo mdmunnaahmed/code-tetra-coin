@@ -2,6 +2,20 @@
 @@include('../partial-html/_template-top.html')
 
 <!-- Dashboard Section Starts Here -->
+<div class="dashboard-top d-flex flex-wrap align-items-center justify-content-between">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
+    <div class="user account-menu d-flex flex-wrap align-items-center gap-3">
+        <p class="fs--14px">Hi, Droper</p>
+        <div class="user-thumb mb-0"><img src="assets/images/thumb/user.png" alt="user"></div>
+        <ul class="account-submenu">
+            <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
+            <li><a href="password.html"><i class="las la-lock"></i> Change Password</a></li>
+            <li><a href="two-factor.html"><i class="las la-lock"></i> Two Factor</a></li>
+            <li><a href="#0"><i class="las la-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+</div>
+
 <div class="dashboard-section">
     <div class="dashboard-sidebar">
         <div class="sidebar-close d-lg-none"><i class="las la-times"></i></div>
@@ -14,7 +28,7 @@
         </div>
         <div class="dashboard-widget dashbaord-sidebar-body">
             <ul class="dashboard-menu">
-                <li><a href="#0"><i class="las la-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="dashboard.html"><i class="las la-tachometer-alt"></i> Dashboard</a></li>
                 <li><a href="#0"><i class="las la-money-check"></i> Transactions</a>
                     <ul class="dashboard-submenu">
                         <li><a href="deposit.html"><i class="las la-hand-holding-usd"></i> Deposit Now</a></li>
@@ -196,8 +210,8 @@
 <!-- Dashboard Section Ends Here -->
 
 <!-- Modal -->
-<div class="modal custom--modal fade" id="modal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal custom--modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -207,10 +221,9 @@
                 </span>
             </div>
             <div class="modal-body">
-                <form action="transaction-preview.html">
+                <form action="transaction-preview.html" name="transaction-preview">
                     <div class="form-group">
                         <label for="price" class="form-label">Deposit Amount:</label>
-
                         <input type="tel" class="form--control form-control" placeholder="Enter Amount">
                     </div>
                 </form>
@@ -221,7 +234,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn--md btn--danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn--md btn--base">Confirm</button>
+                <button type="submit" form="transaction-preview" class="btn btn--md btn--base">Confirm</button>
             </div>
         </div>
     </div>

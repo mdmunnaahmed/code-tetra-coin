@@ -1,0 +1,91 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+
+<!-- Dashboard Section Starts Here -->
+<div class="dashboard-top d-flex flex-wrap align-items-center justify-content-between">
+    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
+    <div class="user account-menu d-flex flex-wrap align-items-center gap-3">
+        <p class="fs--14px">Hi, Droper</p>
+        <div class="user-thumb mb-0"><img src="assets/images/thumb/user.png" alt="user"></div>
+        <ul class="account-submenu">
+            <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
+            <li><a href="password.html"><i class="las la-lock"></i> Change Password</a></li>
+            <li><a href="two-factor.html"><i class="las la-lock"></i> Two Factor</a></li>
+            <li><a href="#0"><i class="las la-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="dashboard-section">
+    <div class="dashboard-sidebar">
+        <div class="sidebar-close d-lg-none"><i class="las la-times"></i></div>
+        <div class="dashboard-sidebar-header dashboard-widget">
+            <div class="user">
+                <div class="user-thumb"><img src="assets/images/thumb/user.png" alt="user"></div>
+                <h6 class="name">Demo Name</h6>
+                <span class="username">demo420</span>
+            </div>
+        </div>
+        <div class="dashboard-widget dashbaord-sidebar-body">
+            <ul class="dashboard-menu">
+                <li><a href="dashboard.html"><i class="las la-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#0"><i class="las la-money-check"></i> Transactions</a>
+                    <ul class="dashboard-submenu">
+                        <li><a href="deposit.html"><i class="las la-hand-holding-usd"></i> Deposit Now</a></li>
+                        <li><a href="deposit-log.html"><i class="las la-history"></i> Deposit History</a></li>
+                        <li><a href="withdraw.html"><i class="las la-receipt"></i> Withdraw Now</a></li>
+                        <li><a href="withdraw-log.html"><i class="las la-history"></i> Withdraw History</a></li>
+                    </ul>
+                </li>
+                <li><a href="#0"><i class="las la-money-check"></i> Buy Tetra</a></li>
+                <li><a href="#0"><i class="las la-money-check-alt"></i> Sell Tetra</a></li>
+                <li><a href="#0"><i class="las la-exchange-alt"></i> Convert Currency</a></li>
+                <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
+                <li><a href="password.html"><i class="las la-lock"></i> Password</a></li>
+                <li><a href="#0"><i class="las la-sign-out-alt"></i> Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dashboard-body">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-xxl-8 col-lg-12">
+                <div class="deposit-preview bg--section">
+                    <div class="deposit-thumb">
+                        <img src="https://script.viserlab.com/microlab/assets/images/withdraw/method/5f6f1f98d88b41601118104.jpg"
+                            alt="Image">
+                    </div>
+                    <div class="deposit-content">
+                        <ul>
+                            <li>
+                                Request Amount: <span class="text--success">10.00 USD</span>
+                            </li>
+                            <li>
+                                Withdrawal Charge: <span class="text--danger">1.20 USD</span>
+                            </li>
+                            <li>
+                                After Charge: <span class="text--warning">8.80 USD</span>
+                            </li>
+                            <li>
+                                Conversion Rate: <span class="text--info">1
+                                    USD
+                                    = 10.00 PKR</span>
+                            </li>
+                            <li>
+                                You Will Get : <span class="text--primary">880.00 PKR</span>
+                            </li>
+                            <li>
+                                Balance Will be : <span class="text--primary">47.80 USD</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dashboard Section Ends Here -->
+
+@@include('../partial-html/_template-bottom.html')
+</body>
+
+</html>

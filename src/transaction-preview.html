@@ -74,38 +74,35 @@
     </div>
     <div class="dashboard-body">
         <div class="row justify-content-center">
-            <div class="col-xxl-6 col-xl-8 col-lg-10 col-md-8 col-sm-10">
-                <div class="card custom--card">
-                    <div class="card-header">
-                        <h5 class="title">Change Password</h5>
+            <div class="col-xl-10 col-xxl-8 col-lg-12">
+                <div class="deposit-preview bg--section">
+                    <div class="deposit-thumb">
+                        <img src="https://script.viserlab.com/microlab/assets/images/withdraw/method/5f6f1f98d88b41601118104.jpg"
+                            alt="Image">
                     </div>
-                    <div class="card-body">
-                        <form class="row gy-3">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="current-pass" class="form-label">Current Password</label>
-                                    <input id="current-pass" type="password" class="form-control form--control"
-                                        placeholder="Current Password">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="new-pass" class="form-label">Current Password</label>
-                                    <input id="new-pass" type="password" class="form-control form--control"
-                                        placeholder="Current Password">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="confirm-pass" class="form-label">Confirm Password</label>
-                                    <input id="confirm-pass" type="password" class="form-control form--control"
-                                        placeholder="Confirm Password">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn--base btn--md w-100 mt-3">Change Password</button>
-                            </div>
-                        </form>
+                    <div class="deposit-content">
+                        <ul>
+                            <li>
+                                Request Amount: <span class="text--success">10.00 USD</span>
+                            </li>
+                            <li>
+                                Withdrawal Charge: <span class="text--danger">1.20 USD</span>
+                            </li>
+                            <li>
+                                After Charge: <span class="text--warning">8.80 USD</span>
+                            </li>
+                            <li>
+                                Conversion Rate: <span class="text--info">1
+                                    USD
+                                    = 10.00 PKR</span>
+                            </li>
+                            <li>
+                                You Will Get : <span class="text--primary">880.00 PKR</span>
+                            </li>
+                            <li>
+                                Balance Will be : <span class="text--primary">47.80 USD</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -113,38 +110,6 @@
     </div>
 </div>
 <!-- Dashboard Section Ends Here -->
-
-<!-- Modal -->
-<div class="modal custom--modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Withdraw</h5>
-                <span type="button" class="" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="las la-times"></i></span>
-                </span>
-            </div>
-            <div class="modal-body">
-                <form action="transaction-preview.html">
-                    <div class="form-group">
-                        <label for="price" class="form-label">Withdraw Amount:</label>
-
-                        <input type="tel" class="form--control form-control" placeholder="Enter Amount">
-                    </div>
-                </form>
-                <div class="d-flex flex-wrap gap-4 mt-2">
-                    <p class="text--success">Min: $<span>10</span></p>
-                    <p class="text--success">Max: $<span>1000000</span></p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn--md btn--danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn--md btn--base">Confirm</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- jQuery library -->
 <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
