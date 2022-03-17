@@ -615,3 +615,115 @@ div[class*="col"] {
     font-weight: 500;
 }
 // Blog Section Ends Here
+
+// Blog Details Section Stars Here
+.blog-details-thumb img {
+    width: 100%;
+}
+
+.blog-details-content p {
+    margin-bottom: 25px;
+}
+
+.blog-details-content blockquote {
+    background: $section-bg;
+    padding: 25px 20px;
+    border-left: 2px solid $white;
+    font-style: italic;
+    color: $white;
+}
+
+.blog-details-header {
+    margin-top: 25px;
+}
+
+.blog-details-header .tag i {
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.blog-details-header .meta-1 {
+    margin: 10px 0;
+}
+
+.blog-details-header .meta-1 li {
+    color: $white;
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+.blog-details-header .meta-1 li a {
+    color: $base-color;
+}
+
+.blog-details-header .meta-1 li i {
+    color: $base-color;
+    font-size: 13px;
+    margin-right: 4px;
+}
+.recent-post-wrapper > .title {
+    position: relative;
+    padding-bottom: 8px;
+    &::before {
+        @extend %position-set;
+        background: $base-color;
+        height: 2px;
+        top: auto;
+        bottom: 0;
+    }
+}
+.recent-post-wrapper {
+    @extend %flex;
+    width: 100%
+}
+.recent-blog {
+    @extend %flex;
+    align-items: center;
+    margin-bottom: 25px;
+    @include breakpoint(max-lg) {
+        @include breakpoint(md) {
+            width: 50%;
+            &:nth-child(odd) {
+                padding-left: 15px;
+            }
+            &:nth-child(even) {
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+.recent-blog:last-child {
+    margin-bottom: 0;
+}
+
+.recent-blog .blog__thumb {
+    width: 100px;
+}
+.recent-blog .blog__thumb img {
+    width: 100%;
+}
+
+.recent-blog .blog__content {
+    width: calc(100% - 100px);
+    padding: 0;
+    padding-left: 15px;
+    border: none;
+}
+.recent-blog .blog__content .title {
+    font-size: 16px;
+}
+.recent-blog .blog__content .date {
+    font-size: 14px;
+    font-weight: 500;
+    color: $base-color;
+}
+
+.blog-sidebar {
+    position: sticky;
+    top: 120px;
+    @include breakpoint(xl) {
+        padding-left: 30px;
+    }
+}
+// Blog Details Section Ends Here
