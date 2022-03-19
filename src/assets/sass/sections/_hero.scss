@@ -86,8 +86,8 @@
         position: relative;
         padding-right: 25px;
         &::before {
-            @include line-ico;
-            content: "\f061";
+            @extend %line-ico;
+            content: '\f061';
             right: 0;
             top: 3px;
         }

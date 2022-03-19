@@ -1,16 +1,3 @@
-@mixin line-ico {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Line Awesome Free";
-}
-@mixin font-ico($icon) {
-    position: absolute;
-    content: "\$icon";
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Font Awesome 5 Free";
-}
 
 @mixin text-wrap {
     display: -webkit-box;

@@ -12,7 +12,6 @@
                 <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
                 <li><a href="password.html"><i class="las la-lock"></i> Change Password</a></li>
                 <li><a href="two-factor.html"><i class="las la-key"></i> Two Factor</a></li>
-
                 <li><a href="#0"><i class="las la-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
@@ -57,38 +56,32 @@
     </div>
     <div class="dashboard-body">
         <div class="row justify-content-center">
-            <div class="col-xxl-6 col-xl-8 col-lg-10 col-md-8 col-sm-10">
+            <div class="col-lg-8 col-xxl-6">
                 <div class="card custom--card">
                     <div class="card-header">
-                        <h5 class="title">Change Password</h5>
+                        <h5 class="card-title">Google Authenticator</h5>
                     </div>
                     <div class="card-body">
-                        <form class="row gy-3">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="current-pass" class="form-label">Current Password</label>
-                                    <input id="current-pass" type="password" class="form-control form--control"
-                                        placeholder="Current Password">
+                        <div class="form-group mx-auto text-center">
+                            <img class="mx-auto"
+                                src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2Fusername%40LocalCoins%3Fsecret%3DP2S3EYXD6WIBDH6G">
+                            <p class="fs--14px my-3">Use Google Authentication App to scan the QR code. <a
+                                    class="text--base" href="#0" target="_blank">App Link</a></p>
+                        </div>
+                        <div class="form-group my-3">
+                            <div class="input-group">
+                                <input type="text" name="key" value="P2S3EYXD6WIBDH6G"
+                                    class="form-control form--control" id="referralURL" readonly>
+                                <div class="input-group-append">
+                                    <button class="input-group-text btn btn--md h-100"> <i class="las la-copy"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="new-pass" class="form-label">Current Password</label>
-                                    <input id="new-pass" type="password" class="form-control form--control"
-                                        placeholder="Current Password">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="confirm-pass" class="form-label">Confirm Password</label>
-                                    <input id="confirm-pass" type="password" class="form-control form--control"
-                                        placeholder="Confirm Password">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn--base btn--md w-100 mt-3">Change Password</button>
-                            </div>
-                        </form>
+                        </div>
+
+                        <button type="button" class="btn btn--base w-100 mt-4" data-bs-toggle="modal"
+                            data-bs-target="#enableModal">
+                            Enable 2FA Authenticator </button>
                     </div>
                 </div>
             </div>
@@ -97,35 +90,28 @@
 </div>
 <!-- Dashboard Section Ends Here -->
 
-<!-- Modal -->
-<div class="modal custom--modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+<div id="enableModal" class="modal custom--modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog ">
+        <!-- Modal content-->
+        <div class="modal-content ">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Withdraw</h5>
-                <span type="button" class="" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="las la-times"></i></span>
-                </span>
+                <h5 class="modal-title">Verify Your Otp</h5>
+                <span data-bs-dismiss="modal" aria-label="Close"><i class="las la-times"></i></span>
             </div>
-            <div class="modal-body">
-                <form action="transaction-preview.html">
+            <form action="">
+                <div class="modal-body ">
                     <div class="form-group">
-                        <label for="price" class="form-label">Withdraw Amount:</label>
-
-                        <input type="tel" class="form--control form-control" placeholder="Enter Amount">
+                        <input type="text" class="form-control form--control"
+                            placeholder="Enter Google Authenticator Code">
                     </div>
-                </form>
-                <div class="d-flex flex-wrap gap-4 mt-2">
-                    <p class="text--success">Min: $<span>10</span></p>
-                    <p class="text--success">Max: $<span>1000000</span></p>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn--md btn--danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn--md btn--base">Confirm</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn--danger btn--sm" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn--success btn--sm">Verify</button>
+                </div>
+            </form>
         </div>
+
     </div>
 </div>
 

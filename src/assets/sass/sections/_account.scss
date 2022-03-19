@@ -1,0 +1,115 @@
+.account-section {
+    position: relative;
+    &::before {
+        @extend %position-set;
+        background: $section-bg;
+        opacity: 0.25;
+    }
+    .account-wrapper {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        max-width: 700px;
+        width: 100%;
+        &.sign-up {
+            max-width: 800px;
+            @include breakpoint(max-xl) {
+                max-width: 700px;
+            }
+            .account-left {
+                @include breakpoint(max-xl) {
+                    padding-left: 6%;
+                    padding-right: 6%;
+                }
+            }
+        }
+        &::before {
+            @extend %position-set;
+            background: #021c40;
+            background: $body-bg;
+            opacity: 0.85;
+        }
+        @include breakpoint(max-xl) {
+            max-width: 600px;
+        }
+        @include breakpoint(max-lg) {
+            max-width: 100% !important;
+        }
+    }
+    .logo {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        img {
+            max-width: 100px;
+        }
+    }
+}
+.account-with {
+    padding-left: 100px;
+    position: relative;
+    font-size: 20px;
+    color: $white;
+    margin: 25px 0;
+    &::before {
+        @extend %position-set;
+        top: 49%;
+        background: $base-color;
+        height: 2px;
+        width: 70px;
+    }
+}
+.account-with-wrapper {
+    gap: 10px 15px;
+    li {
+        a {
+            border-radius: 10px;
+            border: 2px solid rgba($white, 0.2);
+            padding: 10px 25px;
+            color: $white;
+            font-weight: 600;
+            i {
+                margin-right: 5px;
+            }
+            &.facebook {
+                background-color: #1773ea;
+                border-color: #1773ea;
+            }
+            &.google {
+                background-color: #eb493b;
+                border-color: #eb493b;
+            }
+        }
+    }
+}
+.forgot-pass {
+    font-size: 15px;
+}
+.account-btn {
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba($base-color, 0.6);
+}
+.account-form {
+    padding-top: 35px;
+}
+.account-left {
+    z-index: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include breakpoint(max-md) {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+.account-form {
+    .input-group-text {
+        background: transparent;
+    }
+}

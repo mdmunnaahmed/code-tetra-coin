@@ -428,6 +428,11 @@
         display: none;
     }
 }
+.faq-section.bg--body {
+    .faq-item {
+        background: $section-bg !important;
+    }
+}
 // Faq Section Ends Here
 
 // Testimonial Section Starts Here
@@ -674,7 +679,7 @@ div[class*="col"] {
 }
 .recent-post-wrapper {
     @extend %flex;
-    width: 100%
+    width: 100%;
 }
 .recent-blog {
     @extend %flex;
@@ -727,3 +732,30 @@ div[class*="col"] {
     }
 }
 // Blog Details Section Ends Here
+
+// Search Section Starts Here
+.search-header {
+    gap: 10px 30px;
+    li {
+        &:first-child {
+            position: relative;
+            padding-right: 30px;
+            &::before {
+                @extend %line-ico;
+                content: "\f061";
+                right: 0;
+                top: 4px;
+            }
+        }
+    }
+}
+
+.search-section .search-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    .form--control {
+        height: 50px;
+        background: $white;
+    }
+}
+// Search Section Ends Here

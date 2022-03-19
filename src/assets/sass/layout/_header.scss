@@ -75,8 +75,8 @@
             display: flex;
             justify-content: space-between;
             &::after {
-                @include line-ico;
-                content: "\f107";
+                @extend %line-ico;
+                content: '\f107';
                 right: 0;
                 top: 50%;
                 transform: translate(8px, -50%);

@@ -3,15 +3,15 @@
 }
 .form--control {
     height: 50px;
-    border-radius: 5px;
-    border: 1px solid rgba($white, 0.3);
+    border-radius: 7px;
+    border: 2px solid rgba($white, 0.2);
     box-shadow: none;
     color: $white;
     background-color: transparent;
     &:focus {
         color: $white;
         background-color: transparent;
-        border: 1px solid rgba($base-color, 1);
+        border: 2px solid rgba($base-color, 1);
         box-shadow: none;
         outline: 0;
     }
@@ -30,8 +30,13 @@
 
 .input-group-text {
     background: $body-bg;
-    border-color: $border-color;
+    border:2px solid $border-color;
     color: $white;
+}
+.input-group:focus-within {
+    .input-group-text {
+        border-color: $base-color;
+    }
 }
 .form--control::placeholder {
     color: rgba($white, 0.6);
@@ -141,23 +146,16 @@ select {
     }
 }
 .custom--checkbox {
-    padding-left: rem(25px);
+    padding-left: 25px;
     input {
         display: none;
-        &:checked {
-            ~ label {
-                &::before {
-                    content: "\f14a";
-                    color: $base-color;
-                }
-            }
+        &:checked ~ label::before {
+            content: "\f14a" !important;
+            color: $base-color;
         }
     }
     label {
         position: relative;
-        font-size: rem(15px);
-        font-weight: 400;
-        cursor: pointer;
         margin-bottom: 0;
         &::before {
             position: absolute;
@@ -165,8 +163,8 @@ select {
             font-family: "Line Awesome Free";
             font-weight: 900;
             top: 3px;
-            left: rem(-25px);
-            font-size: rem(20px);
+            left: -25px;
+            font-size: 20px;
             line-height: 1;
             @extend %transition;
         }

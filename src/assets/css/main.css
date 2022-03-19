@@ -209,7 +209,7 @@ ul {
 }
 
 .pt-120 {
-    padding-top: clamp(60px, 6vw, 120px);
+    padding-top: clamp(60px, 8vw, 120px);
 }
 
 .pt-100 {
@@ -229,7 +229,7 @@ ul {
 }
 
 .pb-120 {
-    padding-bottom: clamp(60px, 6vw, 120px);
+    padding-bottom: clamp(60px, 8vw, 120px);
 }
 
 .pb-100 {
@@ -253,14 +253,14 @@ ul {
     flex-wrap: wrap;
 }
 
-.video-button, .post-item__content .tag, .deposit-preview, .info-item .info-icon {
+.video-button, .post-item__content .tag, .upload-icon, .deposit-preview, .info-item .info-icon {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-.inner-banner::before, .recent-post-wrapper > .title::before, .dashboard-card::before {
+.inner-banner::before, .recent-post-wrapper > .title::before, .dashboard-card::before, .account-section::before, .account-section .account-wrapper::before, .account-with::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -281,6 +281,13 @@ a, img,
 .name, .btn,
 .cmn--btn, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .faq-item__title::before, .faq-item__title::after, .faq-item__title .title, .slick-dots li button::before, .dashboard-sidebar, .account-menu .account-submenu {
     transition: all 0.3s;
+}
+
+.menu li.has-sub-menu > a::after, .breadcrumb li:nth-child(1)::before, .search-header li:first-child::before, .dashboard-menu li.has-submenu::before {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Line Awesome Free";
 }
 
 h1,
@@ -819,8 +826,8 @@ h6 {
 
 .form--control {
     height: 50px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: none;
     color: #fff;
     background-color: transparent;
@@ -829,7 +836,7 @@ h6 {
 .form--control:focus {
     color: #fff;
     background-color: transparent;
-    border: 1px solid #03b4ed;
+    border: 2px solid #03b4ed;
     box-shadow: none;
     outline: 0;
 }
@@ -848,8 +855,12 @@ h6 {
 
 .input-group-text {
     background: #4c11b8;
-    border-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     color: #fff;
+}
+
+.input-group:focus-within .input-group-text {
+    border-color: #03b4ed;
 }
 
 .form--control::placeholder {
@@ -969,7 +980,7 @@ select option {
 }
 
 .custom--checkbox {
-    padding-left: 1.5625rem;
+    padding-left: 25px;
 }
 
 .custom--checkbox input {
@@ -977,15 +988,12 @@ select option {
 }
 
 .custom--checkbox input:checked ~ label::before {
-    content: "\f14a";
+    content: "\f14a" !important;
     color: #03b4ed;
 }
 
 .custom--checkbox label {
     position: relative;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    cursor: pointer;
     margin-bottom: 0;
 }
 
@@ -995,8 +1003,8 @@ select option {
     font-family: "Line Awesome Free";
     font-weight: 900;
     top: 3px;
-    left: -1.5625rem;
-    font-size: 1.25rem;
+    left: -25px;
+    font-size: 20px;
     line-height: 1;
 }
 
@@ -1140,6 +1148,10 @@ select option {
     color: #ffffff;
 }
 
+.custom--modal .modal-content {
+    border: 0;
+}
+
 .pagination {
     margin: 0;
     justify-content: center;
@@ -1173,7 +1185,7 @@ select option {
 .pagination .page-item.active a, .pagination .page-item:hover span,
 .pagination .page-item:hover a {
     background: #03b4ed;
-    color: #082032;
+    color: #fff;
     border-color: #03b4ed;
 }
 
@@ -1287,11 +1299,7 @@ select option {
 }
 
 .menu li.has-sub-menu > a::after {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Line Awesome Free";
-    content: "\f107";
+    content: '\f107';
     right: 0;
     top: 50%;
     transform: translate(8px, -50%);
@@ -1746,11 +1754,7 @@ select option {
 }
 
 .breadcrumb li:nth-child(1)::before {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Line Awesome Free";
-    content: "\f061";
+    content: '\f061';
     right: 0;
     top: 3px;
 }
@@ -2262,6 +2266,10 @@ select option {
     display: none;
 }
 
+.faq-section.bg--body .faq-item {
+    background: #410ca1 !important;
+}
+
 .testimonial-slider {
     margin-right: -30px;
 }
@@ -2584,6 +2592,31 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     }
 }
 
+.search-header {
+    gap: 10px 30px;
+}
+
+.search-header li:first-child {
+    position: relative;
+    padding-right: 30px;
+}
+
+.search-header li:first-child::before {
+    content: "\f061";
+    right: 0;
+    top: 4px;
+}
+
+.search-section .search-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.search-section .search-wrapper .form--control {
+    height: 50px;
+    background: #fff;
+}
+
 .dashboard-sidebar {
     max-width: 300px;
     width: 100%;
@@ -2632,6 +2665,18 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     padding: 30px;
 }
 
+.upload-icon {
+    width: 25px;
+    height: 25px;
+    background: #03b4ed;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    outline: 2px solid #fff;
+    color: #fff;
+}
+
 .user {
     text-align: center;
 }
@@ -2640,6 +2685,7 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
     width: 80px;
     aspect-ratio: 1;
     margin: 0 auto 13px;
+    position: relative;
 }
 
 .user .user-thumb img {
@@ -2667,10 +2713,6 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
 }
 
 .dashboard-menu li.has-submenu::before {
-    position: absolute;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: "Line Awesome Free";
     content: "\f107";
     right: 0;
     top: 7px;
@@ -3019,6 +3061,7 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
 .account-menu:hover .account-submenu {
     visibility: visible;
     opacity: 1;
+    transform: translate(0);
 }
 
 .account-menu .account-submenu {
@@ -3116,6 +3159,146 @@ div[class*="col"]:nth-of-type(3n + 3) .post-item__content .tag {
 
 .info-item a {
     display: block;
+}
+
+.account-section {
+    position: relative;
+}
+
+.account-section::before {
+    background: #410ca1;
+    opacity: 0.25;
+}
+
+.account-section .account-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.account-section .account-wrapper.sign-up {
+    max-width: 800px;
+}
+
+@media (max-width: 1199px) {
+    .account-section .account-wrapper.sign-up {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .account-section .account-wrapper.sign-up .account-left {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+.account-section .account-wrapper::before {
+    background: #021c40;
+    background: #4c11b8;
+    opacity: 0.85;
+}
+
+@media (max-width: 1199px) {
+    .account-section .account-wrapper {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 991px) {
+    .account-section .account-wrapper {
+        max-width: 100% !important;
+    }
+}
+
+.account-section .logo {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.account-section .logo img {
+    max-width: 100px;
+}
+
+.account-with {
+    padding-left: 100px;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    margin: 25px 0;
+}
+
+.account-with::before {
+    top: 49%;
+    background: #03b4ed;
+    height: 2px;
+    width: 70px;
+}
+
+.account-with-wrapper {
+    gap: 10px 15px;
+}
+
+.account-with-wrapper li a {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.account-with-wrapper li a i {
+    margin-right: 5px;
+}
+
+.account-with-wrapper li a.facebook {
+    background-color: #1773ea;
+    border-color: #1773ea;
+}
+
+.account-with-wrapper li a.google {
+    background-color: #eb493b;
+    border-color: #eb493b;
+}
+
+.forgot-pass {
+    font-size: 15px;
+}
+
+.account-btn {
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(3, 180, 237, 0.6);
+}
+
+.account-form {
+    padding-top: 35px;
+}
+
+.account-left {
+    z-index: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+    .account-left {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+.account-form .input-group-text {
+    background: transparent;
 }
 
 /*# sourceMappingURL=main.css.map */

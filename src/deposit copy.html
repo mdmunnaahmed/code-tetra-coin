@@ -27,249 +27,254 @@
     <!-- Overlay -->
     <div class="overlay"></div>
 
-<!-- Dashboard Section Starts Here -->
-<div class="dashboard-section">
-    <div class="dashboard-sidebar">
-        <div class="sidebar-close d-lg-none"><i class="las la-times"></i></div>
-        <div class="dashboard-sidebar-header dashboard-widget">
-            <div class="user">
-                <div class="user-thumb"><img src="assets/images/thumb/user.png" alt="user"></div>
-                <h6 class="name">Demo Name</h6>
-                <span class="username">demo420</span>
+    <!-- Dashboard Section Starts Here -->
+    <div class="dashboard-section">
+        <div class="dashboard-sidebar">
+            <div class="sidebar-close d-lg-none"><i class="las la-times"></i></div>
+            <div class="dashboard-sidebar-header dashboard-widget">
+                <div class="user">
+                    <div class="user-thumb"><img src="assets/images/thumb/user.png" alt="user">
+                        <div class="form-group">
+                            <input type="file" class="d-none" name="" id="img">
+                            <label for="img" class="upload-icon"><i class="las la-camera"></i></label>
+                        </div>
+                    </div>
+                    <h6 class="name">Demo Name</h6>
+                    <span class="username">demo420</span>
+                </div>
+            </div>
+            <div class="dashboard-widget dashbaord-sidebar-body">
+                <ul class="dashboard-menu">
+                    <li><a href="#0"><i class="las la-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#0"><i class="las la-money-check"></i> Transactions</a>
+                        <ul class="dashboard-submenu">
+                            <li><a href="deposit.html"><i class="las la-hand-holding-usd"></i> Deposit Now</a></li>
+                            <li><a href="deposit-log.html"><i class="las la-history"></i> Deposit History</a></li>
+                            <li><a href="withdraw.html"><i class="las la-receipt"></i> Transaction Now</a></li>
+                            <li><a href="withdraw-log.html"><i class="las la-history"></i> Transaction History</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#0"><i class="las la-money-check"></i> Buy Tetra</a></li>
+                    <li><a href="#0"><i class="las la-money-check-alt"></i> Sell Tetra</a></li>
+                    <li><a href="#0"><i class="las la-exchange-alt"></i> Convert Currency</a></li>
+                    <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
+                    <li><a href="password.html"><i class="las la-lock"></i> Password</a></li>
+                    <li><a href="#0"><i class="las la-sign-out-alt"></i> Sign Out</a></li>
+                </ul>
             </div>
         </div>
-        <div class="dashboard-widget dashbaord-sidebar-body">
-            <ul class="dashboard-menu">
-                <li><a href="#0"><i class="las la-tachometer-alt"></i> Dashboard</a></li>
-                <li><a href="#0"><i class="las la-money-check"></i> Transactions</a>
-                    <ul class="dashboard-submenu">
-                        <li><a href="deposit.html"><i class="las la-hand-holding-usd"></i> Deposit Now</a></li>
-                        <li><a href="deposit-log.html"><i class="las la-history"></i> Deposit History</a></li>
-                        <li><a href="withdraw.html"><i class="las la-receipt"></i> Transaction Now</a></li>
-                        <li><a href="withdraw-log.html"><i class="las la-history"></i> Transaction History</a></li>
-                    </ul>
-                </li>
-                <li><a href="#0"><i class="las la-money-check"></i> Buy Tetra</a></li>
-                <li><a href="#0"><i class="las la-money-check-alt"></i> Sell Tetra</a></li>
-                <li><a href="#0"><i class="las la-exchange-alt"></i> Convert Currency</a></li>
-                <li><a href="profile.html"><i class="las la-user"></i> Profile</a></li>
-                <li><a href="password.html"><i class="las la-lock"></i> Password</a></li>
-                <li><a href="#0"><i class="las la-sign-out-alt"></i> Sign Out</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="dashboard-body">
-        <div class="row justify-content-center g-4">
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/1.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+        <div class="dashboard-body">
+            <div class="row justify-content-center g-4">
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/1.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/2.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/3.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/2.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/3.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/2.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/3.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/3.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/4.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/3.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/5.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/6.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/2.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/7.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/8.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/3.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
-                <div class="card custom--card  deposit-card">
-                    <div class="card-header text-center">
-                        <h6 class="card-title">Paypal - USD</h6>
-                    </div>
-                    <div class="card-body">
-                        <img src="./assets/images/payment/9.jpg" alt="payment">
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/4.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Dashboard Section Ends Here -->
-
-<!-- Modal -->
-<div class="modal custom--modal fade show d-block" id="modal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <span type="button" class="" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="las la-times"></i></span>
-                </span>
-            </div>
-            <div class="modal-body">
-                <form>
-                   
-                    <div class="form-group">
-                        <label for="price" class="form-label">Deposit Amount:</label>
-
-                        <input type="tel" class="form--control form-control" placeholder="Enter Amount">
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/5.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
                     </div>
-                </form>
-                <div class="d-flex flex-wrap gap-4 mt-2">
-                    <p class="text--success">Min: $<span>10</span></p>
-                    <p class="text--success">Max: $<span>1000000</span></p>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn--md btn--danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn--md btn--base">Save changes</button>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/6.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/7.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/8.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-3 ">
+                    <div class="card custom--card  deposit-card">
+                        <div class="card-header text-center">
+                            <h6 class="card-title">Paypal - USD</h6>
+                        </div>
+                        <div class="card-body">
+                            <img src="./assets/images/payment/9.jpg" alt="payment">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#modal" data-bs-toggle="modal" class="cmn--btn btn--md">Deposit Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Dashboard Section Ends Here -->
 
-<!-- jQuery library -->
-<script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- Modal -->
+    <div class="modal custom--modal fade show d-block" id="modal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <span type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="las la-times"></i></span>
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form>
 
-<!-- Bootstrap 5 js -->
-<script src="assets/js/lib/bootstrap.min.js"></script>
+                        <div class="form-group">
+                            <label for="price" class="form-label">Deposit Amount:</label>
 
-<!-- Pluglin Link -->
-<script src="assets/js/lib/slick.min.js"></script>
-<script src="assets/js/lib/magnific-popup.min.js"></script>
-<script src="assets/js/lib/wow.min.js"></script>
-<script src="./assets/js/lib/particle.js"></script>
-<script src="./assets/js/lib/particle-custom.js"></script>
-<script src="./assets/js/lib/apexcharts.min.js"></script>
+                            <input type="tel" class="form--control form-control" placeholder="Enter Amount">
+                        </div>
+                    </form>
+                    <div class="d-flex flex-wrap gap-4 mt-2">
+                        <p class="text--success">Min: $<span>10</span></p>
+                        <p class="text--success">Max: $<span>1000000</span></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn--md btn--danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn--md btn--base">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Main js -->
-<script src="assets/js/main.js"></script>
+    <!-- jQuery library -->
+    <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 5 js -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+
+    <!-- Pluglin Link -->
+    <script src="assets/js/lib/slick.min.js"></script>
+    <script src="assets/js/lib/magnific-popup.min.js"></script>
+    <script src="assets/js/lib/wow.min.js"></script>
+    <script src="./assets/js/lib/particle.js"></script>
+    <script src="./assets/js/lib/particle-custom.js"></script>
+    <script src="./assets/js/lib/apexcharts.min.js"></script>
+
+    <!-- Main js -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

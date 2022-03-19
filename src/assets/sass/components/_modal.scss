@@ -1,4 +1,3 @@
-
 .custom--modal .modal-footer,
 .custom--modal .modal-body,
 .custom--modal .modal-header {
@@ -13,4 +12,9 @@
 .custom--modal .modal-header .modal-title {
     margin: 0;
     color: $title-color;
+}
+
+.custom--modal .modal-content {
+    border: 0;
+    // box-shadow: 0 5px 8px rgba($base-color, 0.3);
 }

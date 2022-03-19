@@ -41,12 +41,25 @@
 .dashboard-widget {
     padding: 30px;
 }
+.upload-icon {
+    width: 25px;
+    height: 25px;
+    background: $base-color;
+    @extend %flex-center;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    outline: 2px solid $white;
+    color: $white;
+}
 .user {
     text-align: center;
     .user-thumb {
         width: 80px;
         aspect-ratio: 1;
         margin: 0 auto 13px;
+        position: relative;
         img {
             width: 100%;
             height: 100%;
@@ -64,7 +77,8 @@
         &.has-submenu {
             position: relative;
             &::before {
-                @include line-ico;
+                // @include line-ico(f107);
+                @extend %line-ico;
                 content: "\f107";
                 right: 0;
                 top: 7px;
@@ -362,6 +376,7 @@
         .account-submenu {
             visibility: visible;
             opacity: 1;
+            transform: translate(0);
         }
     }
     .account-submenu {
