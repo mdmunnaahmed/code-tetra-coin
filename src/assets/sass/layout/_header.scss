@@ -25,13 +25,13 @@
 .logo {
     img {
         max-width: 160px;
-        max-height: 50px;
+        max-height: 40px;
         @include breakpoint(max-md) {
             max-width: 130px;
         }
         @include breakpoint(max-sm) {
             max-width: 100px;
-            max-height: 45px;
+            max-height: 35px;
         }
     }
 }
